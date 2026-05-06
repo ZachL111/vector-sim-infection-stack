@@ -1,0 +1,73 @@
+{
+  "repo": "vector-sim-infection-stack",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for infection workflows, centered on resource planning, capacity fixtures, and allocation and spill reports.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 59,
+      "slack": 38,
+      "drag": 22,
+      "confidence": 82,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 50,
+      "slack": 38,
+      "drag": 32,
+      "confidence": 79,
+      "score": 121,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 62,
+      "slack": 43,
+      "drag": 29,
+      "confidence": 91,
+      "score": 171,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 76,
+      "slack": 54,
+      "drag": 17,
+      "confidence": 69,
+      "score": 224,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 81,
+      "slack": 46,
+      "drag": 16,
+      "confidence": 63,
+      "score": 223,
+      "lane": "ship"
+    }
+  ]
+}
