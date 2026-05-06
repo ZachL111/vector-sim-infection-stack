@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 dotnet run -- --test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vector-sim-infection-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vector-sim-infection-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-vector-sim-infection-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

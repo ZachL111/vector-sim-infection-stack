@@ -1,0 +1,17 @@
+{
+  "repo": "vector-sim-infection-stack",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 167,
+    "watch": 122
+  },
+  "terms": [
+    "input pressure",
+    "state drift",
+    "review cost",
+    "decision risk"
+  ]
+}
